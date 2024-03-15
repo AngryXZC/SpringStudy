@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.xzc.entity.User">
+        <property name="name" value="xzc"/>
+        <property name="age" value="18"/>
+    </bean>
+    <!-- 通过构造器注入 -->
+<!--    <bean id="student" class="com.xzc.entity.Student">-->
+<!--        <constructor-arg index="0" ref="user"/>-->
+<!--    </bean>-->
+    <!-- 通过构造器注入 -->
+    <bean id="student"   class="com.xzc.entity.Student">
+        <property name="user" ref="user"/>
+    </bean>
+</beans>
